@@ -1,28 +1,18 @@
 // Ambil element
-const cart = document.getElementById("cart");
+const skills = document.getElementById("skills");
 
 // ES5
-// function addProduct(name, category) {
-//   return {
-//     name: name,
-//     category: category,
-//   };
-// }
-
-// let getProduct = addProduct("iPhone 12", "Gadget")
-
-// console.log(getProduct)
 
 // ES6
-function addProduct(productName, category) {
-  return {
-    productName,
-    category,
-  };
-}
+const yourSkill = ["Web Design", "UX Design", "Video Editor"];
 
-let getProduct = addProduct("iPhone 12", "Gadget");
+let parent = "<ul>";
 
-console.log(getProduct);
+yourSkill.forEach((skill) => {
+  console.log(skill);
+  parent += `<li>${skill}</li>`;
+});
 
-cart.innerHTML = `Product 1 : ${getProduct.productName}` 
+parent += "</ul>";
+
+skills.innerHTML = parent;
