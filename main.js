@@ -1,18 +1,33 @@
 // Ambil element
 const skills = document.getElementById("skills");
-
-// ES5
+const myPrimarySkillSpan = document.getElementById("primarySkill")
 
 // ES6
 const yourSkill = ["Web Design", "UX Design", "Video Editor"];
 
-let parent = "<ul>";
+const printSkills = yourSkill.map((skill) => {
+    return skill;
+})
 
-yourSkill.forEach((skill) => {
-  console.log(skill);
-  parent += `<li>${skill}</li>`;
-});
+skills.innerHTML = printSkills
 
-parent += "</ul>";
+// Filter
+const myPrimarySkill = yourSkill.filter((skill) => {
+    return skill === "Video Editor"
+    // return skill !== "UX Design"
+})
 
-skills.innerHTML = parent;
+console.log(myPrimarySkill)
+
+myPrimarySkillSpan.innerHTML = myPrimarySkill;
+
+// let parent = "<ul>";
+
+// yourSkill.forEach((skill) => {
+//   console.log(skill);
+//   parent += `<li>${skill}</li>`;
+// });
+
+// parent += "</ul>";
+
+// skills.innerHTML = parent;
